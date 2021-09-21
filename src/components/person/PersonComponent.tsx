@@ -1,4 +1,11 @@
-import { Avatar, Card, CardHeader, Container, Divider } from '@mui/material';
+import {
+  Avatar,
+  Card,
+  CardHeader,
+  Container,
+  Divider,
+  Skeleton,
+} from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { ParamsType, Person } from './models/PersonModels';
@@ -24,8 +31,20 @@ export const PersonComponent = () => {
           <Card elevation={0}>
             <CardHeader
               avatar={<Avatar src={personData?.avatar_url} />}
-              title={personData?.name}
-              subheader={personData?.location}
+              title={
+                personData ? (
+                  personData?.name
+                ) : (
+                  <Skeleton variant='text' width={200} />
+                )
+              }
+              subheader={
+                personData ? (
+                  personData?.location
+                ) : (
+                  <Skeleton variant='text' width={200} />
+                )
+              }
             />
           </Card>
           <Divider />
