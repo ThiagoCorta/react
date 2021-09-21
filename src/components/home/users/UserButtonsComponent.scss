@@ -1,0 +1,23 @@
+.db-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  .db-user-button-container {
+    display: inline;
+    padding: 5px;
+
+    .MuiButton-root {
+      min-width: 100px;
+      padding: 9px 24px 9px 24px;
+      border-radius: 3px;
+      text-transform: capitalize;
+      background-color: #3c8cfc;
+      color: white;
+
+      &:hover {
+        background: #2464c4;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}

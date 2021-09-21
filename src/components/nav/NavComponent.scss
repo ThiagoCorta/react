@@ -1,0 +1,12 @@
+.MuiToolbar-root {
+  text-align: center;
+  background-color: #282828;
+
+  .MuiButton-root {
+    position: absolute;
+    text-transform: none;
+    .MuiSvgIcon-root {
+      font-size: 14px;
+    }
+  }
+}
